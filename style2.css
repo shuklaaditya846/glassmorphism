@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.parent::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.parent {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(6, 114, 177), rgb(1, 14, 26));
+    background-attachment: fixed;
+    position: relative;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(5, 82, 126), rgb(0, 0, 0));
+    clip-path: circle(30% at right);
+}
+
+body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(8, 157, 243), rgb(2, 35, 66));
+    clip-path: circle(20% at 10% 10%);
+}
+
+.parent {
+    z-index: 4;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    min-height: 40px;
+    width: 100%;
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 14%);
+    background: rgb(1 14 26 / 43%);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo>h4 {
+    color: rgba(255, 255, 255, 0.603);
+    padding: 0px 20px;
+}
+
+.links>ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0px 20px 0px auto;
+}
+
+.links>ul>li {
+    /* border: 1px solid rgba(255, 255, 255, 0.603); */
+    transition: 0.2s ease;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.links>ul>li:hover {
+    transition: 0.2s ease;
+    /* border: 1px solid rgba(255, 255, 255, 0.603); */
+    background-color: rgba(255, 255, 255, 0.124);
+}
+
+a {
+    color: rgba(255, 255, 255, 0.603);
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    padding: 40px 0px;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.137);
+    border-radius: 15px;
+    background: rgba(116, 116, 116, 0.137);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px lightblue;
+    backdrop-filter: blur(5px);
+}
+
+.wide {
+    position: relative;
+    /* width: 600px; */
+    display: block;
+    min-height: 300px;
+    margin-bottom: 6px;
+    padding: 2%;
+    /* border-radius: 15px; */
+    background: rgba(116, 116, 116, 0.137);
+    overflow: hidden;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* border-top: 2px lightblue; */
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0 4px 4px -2px #00000045;
+    -moz-box-shadow: 0 4px 4px -2px #00000045;
+    box-shadow: 0 4px 4px -2px #00000045;
+}
+
+/* .wide::after {
+    height: -webkit-fill-available;
+    content: '';
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 37%);
+    margin-bottom: 10px;
+} */
+
+.footer {
+    width: 100%;
+    min-height: 2px;
+    background-color: rgba(255, 255, 255, 0.603);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+}
+
+.footer>ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0px 20px;
+}
+
+.footer>ul>li {
+    /* border: 1px solid rgba(255, 255, 255, 0.603); */
+    transition: 0.2s ease;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.footer>ul>li:hover {
+    transition: 0.2s ease;
+    /* border: 1px solid rgba(255, 255, 255, 0.603); */
+    background-color: rgba(255, 255, 255, 0.124);
+}
+
+.footer>ul>li>a {
+    color: black;
+}
